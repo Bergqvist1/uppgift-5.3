@@ -19,14 +19,16 @@ namespace Uppgift_5_3
             svar[2] = "Liverpool";
             svar[3] = "Ja";
 
-            int poäng = 0;
-            for(int i=0; i < frågor.Length; i++)
-            {
+            Console.WriteLine("Välj en fråga 1-4:");
+            int användareSvar = int.Parse(Console.ReadLine()) - 1;
 
-                Console.WriteLine(frågor[i]);
+            
+
+        
+                Console.WriteLine("Fråga: " + frågor[användareSvar]);
 
                 string användarensSvar = Console.ReadLine();
-                if(användarensSvar == svar[i])
+                if(användarensSvar.ToLower() == svar[användareSvar].ToLower())
                 {
 
                     Console.WriteLine("Grattis du har svarat rätt på frågan");
@@ -35,13 +37,13 @@ namespace Uppgift_5_3
 
                 else
                 {
-                    Console.WriteLine("Du svarade fel på frågan, rätt svar är =" + " " + svar[i]);
+                    Console.WriteLine("Du svarade fel på frågan, rätt svar är =" + " " + svar[användareSvar]);
                 }
 
 
 
 
-            }
+            
 
                                                         
 
